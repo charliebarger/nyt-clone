@@ -5,4 +5,97 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 47px;
+  position: sticky;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 8px 15px 3px 15px;
+}
+
+img {
+  height: 100%;
+}
+
+header > *:not(.logo-wrapper) {
+  position: absolute;
+}
+
+.nav-image-wrapper {
+  height: 70%;
+  padding: 4px 5px;
+}
+
+.logo-wrapper {
+  padding: 2.5px 0px;
+  height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.top-wrapper {
+  height: 100%;
+}
+
+nav > div:first-child {
+  left: 15px;
+}
+
+header > .left-nav-wrapper {
+  right: 15px;
+  top: 3px;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.big {
+  display: none;
+}
+
+header a {
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header > .left-nav-wrapper > button {
+  background-color: rgb(86, 123, 149);
+  border: 1px solid rgb(86, 123, 149);
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+@media screen and (min-width: 1025px) {
+  header {
+    padding-top: 3px;
+    height: 42px;
+  }
+  .big {
+    display: block;
+  }
+  .small {
+    display: none;
+  }
 }
