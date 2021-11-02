@@ -1,27 +1,44 @@
 html {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-  font-family: "Roboto", sans-serif;
-}
-
-header {
-  display: flex;
-  height: 3rem;
-  position: sticky;
-  border-bottom: 0.0625rem solid #e2e2e2;
-  padding: 0.3rem 0.9rem;
 }
 
 img {
   height: 100%;
 }
 
+/* header styles */
+
+header {
+  display: flex;
+  height: 3rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 0.0625rem solid #e2e2e2;
+  padding: 0.3rem 0.9rem;
+  background: white;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.33rem;
+}
+
 header > *:not(.logo-wrapper) {
   position: absolute;
+}
+
+.big {
+  display: none;
 }
 
 header > nav > *,
@@ -58,19 +75,6 @@ header > .left-nav-wrapper {
   gap: 0.33rem;
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.33rem;
-}
-
-.big {
-  display: none;
-}
-
 header a {
   font-weight: 700;
   text-decoration: none;
@@ -99,7 +103,98 @@ header > .left-nav-wrapper > button.account {
   color: black;
 }
 
+/* body styles */
+
+main {
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-style: italic;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.header-wrapper {
+  max-width: 600px;
+  margin: 20px;
+}
+
+.social-wrapper {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 20px 0;
+  border-top: 0.0625rem solid #e2e2e2;
+}
+
+.social-wrapper *:not(.end) {
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 100px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-wrapper .big {
+  display: none;
+}
+
+.social-wrapper > .end {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+figure.intro-img {
+  margin: 0;
+  width: 100vw;
+}
+
+figure.intro-img > img {
+  width: 100%;
+}
+
+figure.intro-img > figcaption {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+figure.intro-img > figcaption > p {
+  margin: 10px 0 0 0;
+  display: inline;
+  font-weight: 500;
+}
+
+figure.intro-img > figcaption > i {
+  color: #888;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 600px) {
+  /* header styles */
+
+  .header-wrapper {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 0;
+  }
+
+  .social-wrapper .big {
+    display: flex;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
 @media screen and (min-width: 1025px) {
+  /* header styles */
+
   header {
     height: 2.625rem;
   }
@@ -108,5 +203,16 @@ header > .left-nav-wrapper > button.account {
   }
   .small {
     display: none;
+  }
+
+  figure.intro-img {
+    width: 945px;
+    margin: auto;
+  }
+
+  figure.intro-img > figcaption {
+    margin-left: 0;
+    max-width: 720px;
+    padding: 0.5rem 0;
   }
 }
