@@ -10,10 +10,10 @@ html {
 
 header {
   display: flex;
-  height: 47px;
+  height: 3rem;
   position: sticky;
-  border-bottom: 1px solid #e2e2e2;
-  padding: 8px 15px 3px 15px;
+  border-bottom: 0.0625rem solid #e2e2e2;
+  padding: 0.3rem 0.9rem;
 }
 
 img {
@@ -24,13 +24,18 @@ header > *:not(.logo-wrapper) {
   position: absolute;
 }
 
+header > nav > *,
+button {
+  cursor: pointer;
+}
+
 .nav-image-wrapper {
   height: 70%;
-  padding: 4px 5px;
+  padding: 0.25rem 0.3rem;
 }
 
 .logo-wrapper {
-  padding: 2.5px 0px;
+  padding: 0.16rem 0;
   height: 100%;
   margin: auto;
   text-align: center;
@@ -41,16 +46,16 @@ header > *:not(.logo-wrapper) {
 }
 
 nav > div:first-child {
-  left: 15px;
+  left: 1rem;
 }
 
 header > .left-nav-wrapper {
-  right: 15px;
-  top: 3px;
-  bottom: 3px;
+  right: 1rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.33rem;
 }
 
 nav {
@@ -59,7 +64,7 @@ nav {
   bottom: 0;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 0.33rem;
 }
 
 .big {
@@ -79,18 +84,24 @@ header a:hover {
 
 header > .left-nav-wrapper > button {
   background-color: rgb(86, 123, 149);
-  border: 1px solid rgb(86, 123, 149);
-  font-size: 13px;
+  border: 0.065rem solid rgb(86, 123, 149);
+  font-size: 0.8125rem;
   font-weight: 500;
   color: white;
   border-radius: 5px;
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
+  font-weight: 400;
+}
+
+header > .left-nav-wrapper > button.account {
+  background: white;
+  border: none;
+  color: black;
 }
 
 @media screen and (min-width: 1025px) {
   header {
-    padding-top: 3px;
-    height: 42px;
+    height: 2.625rem;
   }
   .big {
     display: block;
