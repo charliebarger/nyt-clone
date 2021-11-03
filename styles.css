@@ -176,7 +176,6 @@ figure.intro-img > figcaption > i {
 
 .center-wrap {
   max-width: 600px;
-  margin: auto;
 }
 
 .ad {
@@ -191,7 +190,7 @@ figure.intro-img > figcaption > i {
   margin: 1.75rem 0;
 }
 
-.author-section {
+.content > .author-section {
   margin: 1.75rem auto;
 }
 
@@ -211,6 +210,60 @@ address * {
   font-weight: 800;
 }
 
+.author-info h2 {
+  text-decoration: underline 0.0625rem #ccc;
+  text-underline-offset: 1px;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.author-info h2:hover {
+  text-decoration: none;
+}
+
+.author-section time {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.center-wrap p {
+  font-size: 1.125rem;
+}
+
+.center-wrap,
+.inflation-wrapper {
+  padding: 0 1rem;
+  line-height: 1.56rem;
+}
+
+.inflation-wrapper {
+  margin: auto;
+  max-width: 945px;
+}
+
+.center-wrap strong {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+.inflation-wrapper > p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #665;
+}
+
+.figure-wrapper {
+  border: red solid 2px;
+}
+
+.figure-wrapper figure {
+  width: 173px;
+}
+
 @media screen and (min-width: 600px) {
   /* header styles */
 
@@ -220,12 +273,21 @@ address * {
     margin-bottom: 0;
   }
 
+  .center-wrap,
+  inflation-wrapper {
+    margin: 0 auto;
+  }
+
   .social-wrapper .big {
     display: flex;
   }
 
   h1 {
     font-size: 2.5rem;
+  }
+
+  .center-wrap p {
+    font-size: 1.25rem;
   }
 }
 
@@ -251,5 +313,17 @@ address * {
     margin-left: 0;
     max-width: 720px;
     padding: 0.5rem 0;
+  }
+
+  .center-wrap p {
+    font-size: 1.4rem;
+  }
+
+  .center-wrap strong {
+    font-size: 1.5rem;
+  }
+
+  .inflation-wrapper {
+    padding: 0;
   }
 }
