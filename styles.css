@@ -23,6 +23,7 @@ header.website-head {
   display: flex;
   height: 3rem;
   position: sticky;
+  z-index: 100;
   top: 0;
   border-bottom: 0.0625rem solid #e2e2e2;
   padding: 0.3rem 0.9rem;
@@ -91,7 +92,8 @@ header.website-head a:hover {
   text-decoration: underline;
 }
 
-header.website-head > .left-nav-wrapper > button {
+header.website-head > .left-nav-wrapper > button,
+.comment-button {
   background-color: rgb(86, 123, 149);
   border: 0.065rem solid rgb(86, 123, 149);
   font-size: 0.8125rem;
@@ -153,8 +155,11 @@ h1 {
   font-weight: 100;
 }
 
-figure.intro-img {
+figure {
   margin: 0;
+}
+
+figure.intro-img {
   width: 100vw;
 }
 
@@ -197,9 +202,6 @@ figure.intro-img > figcaption > i {
 
 .content > .author-section {
   margin: 1.75rem auto;
-}
-
-address * {
 }
 
 .author-section * {
@@ -246,7 +248,7 @@ address * {
 }
 
 .inflation-wrapper {
-  margin: auto;
+  margin: 3rem auto;
   max-width: 945px;
 }
 
@@ -329,6 +331,11 @@ h3 {
   text-decoration: none;
 }
 
+.center-wrap.override {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 iframe {
   position: absolute;
   top: 0;
@@ -342,6 +349,58 @@ iframe {
   position: relative;
   padding-bottom: 56.25%;
 }
+
+.iframe-figure > figcaption {
+  padding-left: 1rem;
+  font-size: 0.9375rem;
+  color: #665;
+
+  line-height: 1rem;
+  margin: 0.5rem 0;
+}
+
+.iframe-figure > figcaption > i,
+.bottom-of-article * {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: normal;
+}
+
+.content-wrap.photo {
+  padding-bottom: 0;
+}
+
+.content-wrap.photo > img {
+  width: 100%;
+}
+
+.center-wrap.bottom-of-article > p > a {
+  color: rgb(102, 102, 102);
+}
+
+.center-wrap.bottom-of-article > * {
+  line-height: 1rem;
+  color: rgb(102, 102, 102);
+}
+
+.comment-wrapper {
+  margin: 1rem 0;
+}
+
+.comment-wrapper > .comment-button {
+  font-size: 0.95rem;
+  font-weight: 600;
+  width: 100%;
+  color: white;
+  background: rgb(86, 123, 149);
+  text-transform: uppercase;
+  transition: 0.5s;
+  padding: 0.75rem 1rem;
+}
+.comment-wrapper > .comment-button:hover {
+  background: rgb(50, 104, 145);
+}
+
 @media screen and (min-width: 600px) {
   /* header styles */
 
@@ -364,12 +423,22 @@ iframe {
     font-size: 2.5rem;
   }
 
-  .center-wrap * {
+  .center-wrap *:not(.no-grow *) {
     font-size: 1.25rem;
   }
 
   .center-wrap.override {
     padding: 0 1rem;
+  }
+
+  .iframe-figure > figcaption {
+    padding-left: 0;
+  }
+
+  .comment-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
 }
 
@@ -409,7 +478,7 @@ iframe {
     padding: 0.5rem 0;
   }
 
-  .center-wrap * {
+  .center-wrap *:not(.no-grow *) {
     font-size: 1.4rem;
   }
 
