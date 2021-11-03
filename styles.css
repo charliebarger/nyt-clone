@@ -8,13 +8,18 @@ html {
   box-sizing: inherit;
 }
 
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 img {
   height: 100%;
 }
 
 /* header styles */
 
-header {
+header.website-head {
   display: flex;
   height: 3rem;
   position: sticky;
@@ -33,7 +38,7 @@ nav {
   gap: 0.33rem;
 }
 
-header > *:not(.logo-wrapper) {
+header.website-head > *:not(.logo-wrapper) {
   position: absolute;
 }
 
@@ -41,7 +46,7 @@ header > *:not(.logo-wrapper) {
   display: none;
 }
 
-header > nav > *,
+header.website-head > nav > *,
 button {
   cursor: pointer;
 }
@@ -66,7 +71,7 @@ nav > div:first-child {
   left: 1rem;
 }
 
-header > .left-nav-wrapper {
+header.website-head > .left-nav-wrapper {
   right: 1rem;
   top: 0.3rem;
   bottom: 0.3rem;
@@ -75,18 +80,18 @@ header > .left-nav-wrapper {
   gap: 0.33rem;
 }
 
-header a {
+header.website-head a {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
 }
 
-header a:hover {
+header.website-head a:hover {
   text-decoration: underline;
 }
 
-header > .left-nav-wrapper > button {
+header.website-head > .left-nav-wrapper > button {
   background-color: rgb(86, 123, 149);
   border: 0.065rem solid rgb(86, 123, 149);
   font-size: 0.8125rem;
@@ -97,7 +102,7 @@ header > .left-nav-wrapper > button {
   font-weight: 400;
 }
 
-header > .left-nav-wrapper > button.account {
+header.website-head > .left-nav-wrapper > button.account {
   background: white;
   border: none;
   color: black;
@@ -226,7 +231,7 @@ address * {
   color: #333;
 }
 
-.center-wrap p {
+.center-wrap * {
   font-size: 1.125rem;
 }
 
@@ -234,6 +239,10 @@ address * {
 .inflation-wrapper {
   padding: 0 1rem;
   line-height: 1.56rem;
+}
+
+.center-wrap.override {
+  padding: 0;
 }
 
 .inflation-wrapper {
@@ -248,22 +257,91 @@ address * {
 h3 {
   font-size: 1.35rem;
   margin-bottom: 0;
+  font-weight: 800;
 }
 
-.inflation-wrapper > p {
+.inflation-wrapper > header > p {
   margin: 0.25rem 0;
   font-size: 0.875rem;
   color: #665;
 }
 
 .figure-wrapper {
-  border: red solid 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10.625rem);
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 2rem;
 }
 
 .figure-wrapper figure {
-  width: 173px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
+.figure-wrapper figure p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.figure-wrapper figure img {
+  width: 100%;
+  height: 10.625rem;
+  object-fit: contain;
+}
+
+.lower-author-info {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.lower-author-info * {
+  margin: 0;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.lower-author-info > span {
+  position: relative;
+}
+
+.lower-author-info > span::before {
+  content: "";
+  width: 3.75rem;
+  display: inline-block;
+  height: 1px;
+  background: black;
+  position: absolute;
+  bottom: 2.5rem;
+}
+
+.center-wrap a {
+  color: #326891;
+  text-underline-offset: 0;
+  text-decoration-thickness: 1px;
+}
+
+.center-wrap a:hover {
+  text-decoration: none;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content-wrap {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+}
 @media screen and (min-width: 600px) {
   /* header styles */
 
@@ -286,15 +364,31 @@ h3 {
     font-size: 2.5rem;
   }
 
-  .center-wrap p {
+  .center-wrap * {
     font-size: 1.25rem;
+  }
+
+  .center-wrap.override {
+    padding: 0 1rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
+  .figure-wrapper {
+    grid-template-columns: repeat(auto-fit, 13rem);
+  }
+
+  .figure-wrapper figure img {
+    height: 13rem;
+  }
+
+  .figure-wrapper figure p {
+    font-size: 0.85rem;
+  }
+
   /* header styles */
 
-  header {
+  header.website-head {
     height: 2.625rem;
   }
   .big {
@@ -315,7 +409,7 @@ h3 {
     padding: 0.5rem 0;
   }
 
-  .center-wrap p {
+  .center-wrap * {
     font-size: 1.4rem;
   }
 
