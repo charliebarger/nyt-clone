@@ -1,3 +1,9 @@
+:root {
+  --blue: hsl(205, 27%, 46%);
+  --outline-blue: hsl(205, 27%, 46%);
+  --off-white-1: hsl(0, 0%, 80%);
+}
+
 html {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -26,7 +32,7 @@ header.website-head {
   position: sticky;
   z-index: 100;
   top: 0;
-  border-bottom: 0.0625rem solid #e2e2e2;
+  border-bottom: 0.0625rem solid var(--off-white-1);
   padding: 0.3rem 0.9rem;
   background: white;
 }
@@ -95,8 +101,8 @@ header.website-head a:hover {
 
 header.website-head > .left-nav-wrapper > button,
 .comment-button {
-  background-color: rgb(86, 123, 149);
-  border: 0.065rem solid rgb(86, 123, 149);
+  background-color: var(--blue);
+  border: 0.065rem solid var(--outline-blue);
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
@@ -141,7 +147,7 @@ h1 {
   height: 1.75rem;
   width: 1.75rem;
   border-radius: 100px;
-  background: #eee;
+  background: hsl(0, 0%, 93%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -174,15 +180,19 @@ figure.intro-img > figcaption {
   color: #666;
 }
 
-figure.intro-img > figcaption > p {
+figure > figcaption > p {
   margin: 0.625rem 0 0 0;
   display: inline;
   font-weight: 500;
 }
 
-figure.intro-img > figcaption > i {
+figure > figcaption > i {
   color: #888;
   font-size: 0.875rem;
+}
+
+figure.iframe-figure > figcaption > p {
+  font-size: 1rem;
 }
 
 .center-wrap {
@@ -190,9 +200,9 @@ figure.intro-img > figcaption > i {
 }
 
 .ad {
-  height: 250px;
-  background: #f7f7f7;
-  color: #ccc;
+  height: 15.625rem;
+  background: hsl(0, 0%, 97%);
+  color: hsl(0, 0%, 80%);
   text-transform: uppercase;
   padding: 1rem;
   font-size: 0.6rem;
@@ -219,7 +229,7 @@ figure.intro-img > figcaption > i {
 }
 
 .author-info h2 {
-  text-decoration: underline 0.0625rem #ccc;
+  text-decoration: underline 0.0625rem var(--off-white-1);
   text-underline-offset: 1px;
   margin-bottom: 0.25rem;
   cursor: pointer;
@@ -273,7 +283,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, 10.625rem);
   justify-content: center;
-  gap: 10px;
+  gap: 0.625rem;
   padding-bottom: 2rem;
 }
 
@@ -352,7 +362,7 @@ iframe {
 }
 
 .iframe-figure > figcaption {
-  padding-left: 1rem;
+  padding: 0 1rem;
   font-size: 0.9375rem;
   color: #665;
 
@@ -405,8 +415,8 @@ iframe {
 nav.bottom {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid rgb(226, 226, 226);
-  border-bottom: 2px solid rgb(226, 226, 226);
+  border-top: 0.125rem solid rgb(226, 226, 226);
+  border-bottom: 0.125rem solid rgb(226, 226, 226);
   padding: 0.25rem 0;
 }
 
@@ -427,7 +437,7 @@ nav.bottom div:first-child * {
 
 nav.bottom > * {
   margin: 0 1rem;
-  border-top: rgb(226, 226, 226) solid 1px;
+  border-top: rgb(226, 226, 226) solid 0.16rem;
   text-align: left;
   padding: 1rem;
   text-decoration: none;
@@ -512,7 +522,7 @@ footer a:hover {
 .suggestion-section {
   width: 100%;
   margin: 1.5rem 0;
-  border-top: black solid 2px;
+  border-top: black solid 0.125rem;
   padding: 1rem 0;
 }
 
@@ -525,7 +535,7 @@ footer a:hover {
 .suggested-wrapper {
   display: flex;
   background: rgb(255, 255, 255);
-  border: 1px solid rgb(226, 226, 226);
+  border: 0.16rem solid rgb(226, 226, 226);
   padding: 1rem;
 }
 
@@ -546,8 +556,8 @@ footer a:hover {
 }
 
 .img-wrapper {
-  flex: 0 0 82px;
-  height: 82px;
+  flex: 0 0 13.66rem;
+  height: 13.66rem;
   margin-right: 1rem;
 }
 
