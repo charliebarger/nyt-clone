@@ -30,7 +30,7 @@ header.website-head {
   background: white;
 }
 
-nav {
+nav.top {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -47,7 +47,7 @@ header.website-head > *:not(.logo-wrapper) {
   display: none;
 }
 
-header.website-head > nav > *,
+header.website-head > nav.top > *,
 button {
   cursor: pointer;
 }
@@ -68,7 +68,7 @@ button {
   height: 100%;
 }
 
-nav > div:first-child {
+nav.top > div:first-child {
   left: 1rem;
 }
 
@@ -401,6 +401,26 @@ iframe {
   background: rgb(50, 104, 145);
 }
 
+nav.bottom {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid rgb(226, 226, 226);
+  padding: 0.25rem 0;
+}
+
+nav.bottom > * {
+  margin: 0 1rem;
+  border-top: rgb(226, 226, 226) solid 1px;
+  text-align: left;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 600px) {
   /* header styles */
 
@@ -440,6 +460,84 @@ iframe {
     align-items: center;
     gap: 2rem;
   }
+}
+
+.bottom-section {
+  max-width: 1200px;
+  margin: 1.5rem 1rem;
+}
+
+.suggestion-section {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-top: black solid 2px;
+  padding: 1rem 0;
+}
+
+.suggestion-section > h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.suggested-wrapper {
+  display: flex;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(226, 226, 226);
+  padding: 1rem;
+}
+
+.suggested-wrapper span {
+  font-size: 0.6875rem;
+}
+
+.suggested-wrapper h5 {
+  font-size: 1rem;
+}
+
+.suggested-wrapper p {
+  font-size: 0.9375rem;
+}
+
+.suggested-wrapper * {
+  margin: 0;
+}
+
+.img-wrapper {
+  flex: 0 0 82px;
+  height: 82px;
+  margin-right: 1rem;
+}
+
+.img-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  object-position: center;
+}
+
+.text-wrapper * {
+  line-height: 1rem;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-wrapper.more {
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.text-wrapper.more > time {
+  font-size: 0.75rem;
+  color: #665;
+}
+
+.suggested-grid {
+  display: grid;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 1025px) {
