@@ -4,7 +4,7 @@
 
 Clone of [this NYT article](https://www.nytimes.com/2014/03/18/science/space/detection-of-waves-in-space-buttresses-landmark-theory-of-big-bang.html )
 
-> See it Live at [charliebarger.github.io/nyt-clone/](charliebarger.github.io/nyt-clone/)
+> See it Live at [https://charliebarger.github.io/nyt-clone/](https://charliebarger.github.io/nyt-clone/)
 
 ## Demo
 
